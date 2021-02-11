@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="country-page">
     <a-button type="primary" v-on:click="clickedFetch()">
       Fetch Countries
     </a-button>
@@ -35,7 +35,10 @@ export default Vue.extend({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.class{
-  
+.country-page{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px 80px;
 }
 </style>
