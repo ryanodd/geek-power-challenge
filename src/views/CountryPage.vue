@@ -11,7 +11,7 @@
         <a-button class="fetch-button" type="primary" size="large" v-on:click="clickedFetch()">
           {{"Fetch"}}
         </a-button>
-        <a-spin v-if="fetching" class="fetch-spinner"/>
+        <a-spin v-if="showFetchingSpinner" class="fetch-spinner"/>
         <div v-if="fetchMessage" class="fetch-message">
           {{this.fetchMessage}}
         </div>
