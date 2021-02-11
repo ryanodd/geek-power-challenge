@@ -1,0 +1,20 @@
+{
+  "countries": [
+    {
+      "id": 23,
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    {
+      "id": 36,
+      "country": "United States of America",
+      "countryCode": "US"
+    },
+    {
+      "id": 78,
+      "country": "Mexico",
+      "countryCode": "MX"
+    }
+  ],
+  "success": true
+}
