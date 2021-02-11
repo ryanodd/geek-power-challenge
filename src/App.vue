@@ -20,9 +20,11 @@ export default Vue.extend({
 
 
 <style lang="scss">
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap');
 // GLOBAL STYLING
 #app {
-  font-family: Helvetica, Avenir, Arial, sans-serif;
+ 
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -38,8 +40,7 @@ export default Vue.extend({
 
   display: flex;
   justify-content: center;
-  background-color: #2c3e50;
-
+  background-color: #616c77;
 }
 .app-column{
   // is as wide as possible before max-width
@@ -47,6 +48,7 @@ export default Vue.extend({
   max-width: 1000px;
   height: 100%;
 
-
+  border-width: 5px;
+  box-shadow: 0px 5px 15px#00000070;
 }
 </style>

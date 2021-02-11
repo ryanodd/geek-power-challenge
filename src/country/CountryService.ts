@@ -8,32 +8,32 @@ import mockJson from './sample-fetch-response.json'
 export class CountryService {
 	
   countries: Country[] = []
-  
-  constructor() {
-    console.log('initin')
-	}
 
-  fetchCountries(){
-    console.log('fetchin!!!!!!!!!!')
-    axios.post("/API/getCountries")
-    .then((res) => {
-      console.log(`statusCode: ${res}`)
-      console.log(res)
-    })
-    .catch(() => {
-      const mockResponse: FetchCountriesResponse = mockJson
-      if (mockResponse.success){
-        mockResponse.countries.forEach(country => {
-          Vue.set(this.countries, this.countries.length, {
-            id: country.id.toString(),
-            name: country.country,
-            countryCode: country.countryCode
-          })
+  fetchCountries(): Promise<string>{
+    return new Promise<string>((resolve, reject) => {
+      setTimeout(() => {
+        axios.post("/API/getCountries")
+        .then(() => {
+          reject("The request somehow worked?!")
         })
-      }
-      else{
-        console.log("Error")
-      }
+        .catch(() => {
+          const mockResponse: FetchCountriesResponse = mockJson
+          if (mockResponse.success){
+            // Use Vue.set to make UI reactive to this change
+            Vue.set(this, 'countries', mockResponse.countries.map(country => {
+              return {
+                id: country.id.toString(),
+                name: country.country,
+                countryCode: country.countryCode
+              }
+            }))
+            resolve("Success!")
+          }
+          else{
+            reject("Boooooo!")
+          }
+        })
+      }, 1600)
     })
   }
 }
