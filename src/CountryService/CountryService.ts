@@ -48,6 +48,7 @@ export class CountryService {
   }
 
   deleteCountry(id: string){
+    //Normally, this would also make an api request
     Vue.delete(this.countryDict, id)
   }
 }
