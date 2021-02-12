@@ -51,7 +51,6 @@ typings/
 .npm
 .DS_Store
 node_modules
-/dist
 
 # Optional eslint cache
 .eslintcache
@@ -86,7 +85,6 @@ node_modules
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
