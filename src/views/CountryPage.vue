@@ -25,7 +25,7 @@
 import Vue from 'vue';
 import CountryTable from '../components/CountryTable.vue';
 import { Button, Spin } from 'ant-design-vue';
-import { countryServiceInstance } from '../country/CountryService';
+import { countryServiceInstance } from '../CountryService/CountryService';
 
 Vue.use(Button);
 Vue.use(Spin);
